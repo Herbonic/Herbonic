@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERBONIC</title>
+  <link rel="icon" type="image/x-icon" href="im/1.jpg">
+  <link rel="stylesheet" href="newprodcut.css">
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+ <header>
+  <div class="container">
+    <div class="logo">
+      <a href="/" aria-label="Home">
+        <img src="im/New folder/logo.png" alt="Herbonic Logo" class="logo-img">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="cart-icon">
+      <a href="#cart" aria-label="Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <!-- Product Details Section -->
+  <section class="product-details">
+    <div class="container">
+      <div class="product-detail-card">
+        <div class="product-image">
+          <img src="im/New folder/rosemary.jpg" alt="Rosemary" loading="lazy">
+        </div>
+        <div class="product-content" data-id="1" data-name="Rosemary">
+          <h2>Rosemary</h2>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1500">30g - ₨1500</option>
+              <option value="50g" data-price="2200">50g - ₨2200</option>
+              <option value="70g" data-price="2800">70g - ₨2800</option>
+            </select>
+            
+          </div>
+          <h3>Description (English)</h3>
+          <p>Rosemary is an aromatic herb that boosts memory, improves focus, and supports digestion and hair health.</p>
+          <h3>تفصیل (اردو)</h3>
+          <p>روزمیری ایک خوشبودار جڑی بوٹی ہے جو یادداشت بہتر بناتی ہے، توجہ مرکوز کرنے میں مدد دیتی ہے اور نظام ہضم و بالوں کی صحت میں فائدہ مند ہے۔۔</p>
+          <button class="add-to-cart" aria-label="Add rosemary to cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>We provide high-quality herbal products to promote a healthier lifestyle.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: Herbonic88@gmail.com</p>
+          <p>Phone: +92 332 5207977</p>
+          <p>Address: ALnoor Gardan Phase # 4 , Street # 1 , Bahawalpur, Pakistan</p>
+        </div>
+        <div class="footer-column">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="social-media">
+      <div class="container">
+        <div class="social-icons">
+          <a href="https://facebook.com/herbonic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/herbonic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/herbonic" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/herbonic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <p>&copy; 2025 HERBONIC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

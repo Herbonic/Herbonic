@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERBONIC</title>
+  <link rel="icon" type="image/x-icon" href="im/1.jpg">
+  <link rel="stylesheet" href="newindex.css">
+  <link rel="stylesheet" href="indexmedia.css">
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <!-- Header -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="/" aria-label="Home">
+        <img src="im/New folder/logo.png" alt="Herbonic Logo" class="logo-img">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="cart-icon">
+      <a href="index.html" aria-label="Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="slider-container">
+      <!-- Slider Images -->
+      <div class="slider">
+        <img src="im/banner.jpg" alt="Herbal Products 1" class="slide active">
+        <img src="im/396dbec966a8ec6b5dbba3aaf25c2403.jpg" alt="Herbal Products 2" class="slide">
+        <img src="im/599919_19030662_3469035_01facbd5_image.jpg" alt="Herbal Products 3" class="slide">
+      </div>
+      <!-- Slider Navigation Buttons -->
+      <button class="prev-btn" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
+      <button class="next-btn" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
+      <!-- Slider Indicators -->
+      <div class="indicators">
+        <span class="indicator active" onclick="setSlide(0)"></span>
+        <span class="indicator" onclick="setSlide(1)"></span>
+        <span class="indicator" onclick="setSlide(2)"></span>
+      </div>
+      <!-- Hero Text Overlay -->
+      <div class="hero-text">
+        <h2>Pure Herbal Remedies</h2>
+        <p>Your natural solution for a healthier lifestyle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Listings -->
+<section id="products" class="products">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      
+      <!-- Product 1: Chamomile Tea -->
+      <div class="product-card" data-id="1" data-name="Chamomile Tea">
+        <a href="chamomile.html" target="_blank">
+          <img src="im/New folder/chamomile.jpg" alt="Chamomile Tea" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Chamomile Tea</h3>
+          <p>A calming herbal tea that promotes better sleep, reduces anxiety, and supports digestion.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1500">30g - ₨1500</option>
+              <option value="50g" data-price="2200">50g - ₨2200</option>
+              <option value="70g" data-price="2800">70g - ₨2800</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Chamomile Tea to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 2: Rosemary -->
+      <div class="product-card" data-id="2" data-name="Rosemary">
+        <a href="rosemary.html" target="_blank">
+          <img src="im/New folder/rosemary.jpg" alt="Rosemary" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Rosemary</h3>
+          <p>An aromatic herb that improves memory, enhances focus, and supports digestion and hair health.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1000">30g - ₨1000</option>
+              <option value="50g" data-price="1500">50g - ₨1500</option>
+              <option value="70g" data-price="1900">70g - ₨1900</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Rosemary to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 3: Lemongrass -->
+      <div class="product-card" data-id="3" data-name="Lemongrass">
+        <a href="lemongrass.html" target="_blank">
+          <img src="im/New folder/lemon.jpg" alt="Lemongrass" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Lemongrass</h3>
+          <p>A citrus-scented herb that supports digestion, reduces inflammation, and boosts immunity.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="2000">30g - ₨2000</option>
+              <option value="50g" data-price="2900">50g - ₨2900</option>
+              <option value="70g" data-price="3700">70g - ₨3700</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Lemongrass to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 4: Olive Leaves -->
+      <div class="product-card" data-id="4" data-name="Olive Leaves">
+        <a href="oliveleaves.html" target="_blank">
+          <img src="im/New folder/oliveleaves.jpg" alt="Olive Leaves" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Olive Leaves</h3>
+          <p>Rich in antioxidants, these leaves help control blood pressure and support overall immunity.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="2500">30g - ₨2500</option>
+              <option value="50g" data-price="3600">50g - ₨3600</option>
+              <option value="70g" data-price="4600">70g - ₨4600</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Olive Leaves to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 5: Morning Peace -->
+      <div class="product-card" data-id="5" data-name="Morning Peace">
+        <a href="morningpeace.html" target="_blank">
+          <img src="im/New folder/morning.jpg" alt="Morning Peace" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Morning Peace</h3>
+          <p>A revitalizing herbal blend to start your day with calm energy, clarity, and focus.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1800">30g - ₨1800</option>
+              <option value="50g" data-price="2600">50g - ₨2600</option>
+              <option value="70g" data-price="3300">70g - ₨3300</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Morning Peace to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 6: Tranquil Flower Tea -->
+      <div class="product-card" data-id="6" data-name="Tranquil Flower Tea">
+        <a href="flowertea.html" target="_blank">
+          <img src="im/New folder/rosemary.jpg" alt="Tranquil Flower Tea" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Tranquil Flower Tea</h3>
+          <p>A gentle floral infusion designed to relieve stress, calm the mind, and elevate mood naturally.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="2200">30g - ₨2200</option>
+              <option value="50g" data-price="3200">50g - ₨3200</option>
+              <option value="70g" data-price="4100">70g - ₨4100</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Tranquil Flower Tea to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 7: Balance Brew Tea -->
+      <div class="product-card" data-id="7" data-name="Balance Brew Tea">
+        <a href="balancebrewtea.html" target="_blank">
+          <img src="im/New folder/brewtea.jpg" alt="Balance Brew Tea" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Balance Brew Tea</h3>
+          <p>A blend of natural herbs crafted to restore mind-body balance, reduce stress, and improve focus.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1400">30g - ₨1400</option>
+              <option value="50g" data-price="2000">50g - ₨2000</option>
+              <option value="70g" data-price="2600">70g - ₨2600</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Balance Brew Tea to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 8: Honey -->
+      <div class="product-card" data-id="8" data-name="Honey">
+        <a href="honey.html" target="_blank">
+          <img src="im/New folder/honey.jpg" alt="Honey" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Honey</h3>
+          <p>Pure, raw honey rich in antioxidants and nutrients. A natural sweetener that boosts energy and immunity.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="800">30g - ₨800</option>
+              <option value="50g" data-price="1200">50g - ₨1200</option>
+              <option value="70g" data-price="1600">70g - ₨1600</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Honey to cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 9: Olive Breeze Tea -->
+      <div class="product-card" data-id="9" data-name="Olive Breeze Tea">
+        <a href="olivebreezetea.html" target="_blank">
+          <img src="im/New folder/oliveleaves.jpg" alt="Olive Breeze Tea" loading="lazy">
+        </a>
+        <div class="product-info">
+          <h3>Olive Breeze Tea</h3>
+          <p>A soothing olive leaf infusion that promotes wellness, supports immunity, and calms the senses.</p>
+          <div class="quantity-price">
+            <select class="quantity-select" onchange="updatePrice(this)">
+              <option value="30g" data-price="1600">30g - ₨1600</option>
+              <option value="50g" data-price="2300">50g - ₨2300</option>
+              <option value="70g" data-price="3000">70g - ₨3000</option>
+            </select>
+          </div>
+          <button class="add-to-cart" aria-label="Add Olive Breeze Tea to cart">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Shopping Cart -->
+  <section id="cart" class="cart">
+    <div class="container">
+      <h2>Shopping Cart</h2>
+      <div class="cart-wrapper">
+        <div id="cart-empty" class="cart-empty" style="display: none;">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Your cart is empty.</p>
+          <a href="#products" class="btn-cta">Shop Now</a>
+        </div>
+        <div id="cart-content" class="cart-content">
+          <table id="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+          <div class="cart-summary">
+            <p>Subtotal: <span id="cart-total">0.00</span></p>
+            <button id="clear-cart" class="btn-clear">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Details Section -->
+  <section id="user-details" class="user-details">
+    <div class="container">
+      <h2>Enter Your Details</h2>
+      <div class="form-card">
+        <form id="user-details-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" ">
+            <label for="name">Full Name</label>
+            <span class="error-message">Please enter your full name.</span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="address" name="address" required placeholder=" ">
+            <label for="address">Address</label>
+            <span class="error-message">Please enter your address.</span>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contact" name="contact" required pattern="[0-9]{10,12}" placeholder=" ">
+            <label for="contact">Contact Number</label>
+            <span class="error-message">Please enter a valid contact number (10-12 digits).</span>
+          </div>
+          <button type="submit" id="checkout-btn" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+            <span class="loader" style="display: none;"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>We provide high-quality herbal products to promote a healthier lifestyle.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: Herbonic88@gmail.com</p>
+          <p>Phone:+92 332 5207977</p>
+          <p>Address: ALnoor Gardan Phase # 4 , Street # 1 , Bahawalpur, Pakistan</p>
+        </div>
+        <!-- Newsletter -->
+        <div class="footer-column">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Social Media Icons -->
+    <div class="social-media">
+      <div class="container">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/herbonic_?igsh=cXg0NDhzMHh0MTkz" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/herbonic_?igsh=cXg0NDhzMHh0MTkz" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/herbonic_?igsh=cXg0NDhzMHh0MTkz" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/herbonic_?igsh=cXg0NDhzMHh0MTkz" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+      <div class="container">
+        <p>&copy; 2025 HERBONIC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
