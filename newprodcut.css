@@ -443,6 +443,81 @@ footer {
   animation: fadeIn 1s ease-out;
 }
 
+/* Product Gallery Section */
+.product-gallery {
+  padding: 60px 0;
+  background-color: #f5f5f5; /* Matches body background */
+}
+
+.product-gallery h2 {
+  font-size: 2rem;
+  color: #2e4c45; /* Forest Green */
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.product-gallery h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: #e6cc9e; /* Honey Yellow */
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.thumbnail.active {
+  border: 2px solid #e6cc9e; /* Honey Yellow */
+  opacity: 1;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .product-detail-card {
@@ -452,6 +527,12 @@ footer {
 
   .product-image img {
     height: 300px;
+  }
+
+  .main-image img,
+  .thumbnail {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -521,5 +602,11 @@ footer {
     font-size: 1.5rem;
     width: 35px;
     height: 35px;
+  }
+
+  .main-image img,
+  .thumbnail {
+    width: 200px;
+    height: 200px;
   }
 }
